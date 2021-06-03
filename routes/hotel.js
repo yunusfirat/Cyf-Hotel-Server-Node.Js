@@ -4,7 +4,7 @@ const router = express.Router();
 
 // booking search
 
-router.get("/bookings/search",search)
+router.get("/bookings/search", search)
 // create booking
 router.post("/bookings", post);
 
