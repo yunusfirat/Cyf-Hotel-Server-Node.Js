@@ -1,5 +1,5 @@
 import express from "express";
-import { post, remove, listname, list, search } from "../controller/mailinglist.js";
+import { post, remove, allbookings, bookingbyid, search } from "../controller/hotel.js";
 const router = express.Router();
 
 // create booking
@@ -12,10 +12,10 @@ router.post("/bookings", post);
 router.delete("/bookings/:id", remove);
 
 //  get booking by id
-router.get("/bookings/:id", listname);
+router.get("/bookings/:id", bookingbyid);
 
 // view all bookings
-router.get("/bookings", list);
+router.get("/allbookings", allbookings);
 
 // booking search
 
