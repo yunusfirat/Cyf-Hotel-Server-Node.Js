@@ -2,6 +2,9 @@ import express from "express";
 import { post, remove, allbookings, bookingbyid, search } from "../controller/hotel.js";
 const router = express.Router();
 
+// booking search
+
+router.get("/bookings/search",search)
 // create booking
 router.post("/bookings", post);
 
@@ -15,11 +18,8 @@ router.delete("/bookings/:id", remove);
 router.get("/bookings/:id", bookingbyid);
 
 // view all bookings
-router.get("/allbookings", allbookings);
+router.get("/bookings", allbookings);
 
-// booking search
-
-router.get("/bookings/search",search)
 
 
 
