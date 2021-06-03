@@ -2,7 +2,10 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const bookings =require("../data/data.cjs")
 const { v4: uuidv4 } = require("uuid");
-
+const moment = require('moment');
+const validator = require("email-validator");
+console.log(validator.validate("test@email.com"))
+console.log(moment().format())
 
 export const post = (req, res) => {
     const num = uuidv4();

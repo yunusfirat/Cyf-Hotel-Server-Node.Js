@@ -15,8 +15,10 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "email-validator": "^2.0.4",
     "express": "^4.17.1",
     "faker": "^5.5.3",
+    "moment": "^2.29.1",
     "nodemon": "^2.0.7",
     "uuidv4": "^6.2.8"
   }
