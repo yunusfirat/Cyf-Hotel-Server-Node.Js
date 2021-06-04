@@ -26,7 +26,9 @@ export const search = (req, res) => {
             || booking.surname.toLocaleLowerCase().includes(term)
             || booking.email.toLocaleLowerCase().includes(term))
         if (termfound) {
-            res.json(bookings.filter(booking => booking.firstname.toLowerCase().includes(term) || booking.surname.toLowerCase().includes(term)))
+            res.json(bookings.filter(booking => booking.firstname.toLowerCase().includes(term)
+            || booking.surname.toLowerCase().includes(term)
+            || booking.email.toLocaleLowerCase().includes(term)))
         } else {
             res.status(400).json({ msg: `No booking with the term of ${term}` });
         }
