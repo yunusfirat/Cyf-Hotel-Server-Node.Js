@@ -4,7 +4,6 @@ const bookings = require("../data/data.cjs")
 const { v4: uuidv4 } = require("uuid");
 const moment = require('moment');
 const validator = require("email-validator");
-console.log(validator.validate("test@email.com"))
 
 
 export const search = (req, res) => {
@@ -28,7 +27,7 @@ export const search = (req, res) => {
         if (termfound) {
             res.json(bookings.filter(booking => booking.firstname.toLowerCase().includes(term)
             || booking.surname.toLowerCase().includes(term)
-            || booking.email.toLocaleLowerCase().includes(term)))
+            || booking.email.toLowerCase().includes(term)))
         } else {
             res.status(400).json({ msg: `No booking with the term of ${term}` });
         }
@@ -42,6 +41,7 @@ export const post = (req, res) => {
     const newBoking = {
         id: num,
         roomid: req.body.roomid,
+        title: req.body.title,
         firstname: req.body.firstname,
         surname: req.body.surname,
         email: req.body.email,

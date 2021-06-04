@@ -2,6 +2,7 @@ const Data = [
     {
         "id": "9d728557-377f-4e01-8197-224dc5885a64",
         "roomid": "123",
+        "title": "Mr",
         "firstname": "john",
         "surname": "Doe",
         "email": "johndoe@doe.com",
